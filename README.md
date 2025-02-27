@@ -1,8 +1,5 @@
 # 📊 Northwind Data Analysis  
 
-![Northwind Analysis](https://img.shields.io/badge/SQL-PowerBI-blue?style=flat-square)  
-**Author:** [HsnHmrc](https://github.com/HsnHmrc)  
-
 ## 📌 Overview  
 This repository contains an **in-depth analysis of the Northwind dataset**, a sample database representing a fictional company that sells specialty food products. The goal is to derive meaningful business insights using **SQL, Python, and Power BI**.  
 
@@ -12,7 +9,7 @@ This repository contains an **in-depth analysis of the Northwind dataset**, a sa
 ✔ Perform **Exploratory Data Analysis (EDA)** to uncover sales trends, customer behavior, and product performance.  
 ✔ Use **SQL queries** to extract meaningful insights from the database.  
 ✔ Build **Power BI visualizations** for interactive and data-driven storytelling.  
-✔ Conduct **category-based sales analysis** and identify potential business opportunities.  
+✔ Conduct **deep analysis** and identify potential business opportunities.  
 
 ---
 
@@ -29,27 +26,26 @@ The **Northwind dataset** consists of multiple relational tables, including:
 
 ## 🔎 Analysis & Insights  
 
-### 📌 Sales Trends  
+### 📈 Sales Trends  
 - Annual revenue growth was analyzed to **identify seasonality and patterns** in sales.  
 - Monthly and quarterly sales trends were visualized for **forecasting future demand**.  
 
-### 📌 Category-Based Analysis  
+### 🎏 Category-Based Analysis  
 - Top-selling categories and their **revenue contribution** were evaluated.  
 - Product performance across different **regions and customer segments** was assessed.  
 
-### 📌 Customer Insights  
-- **RFM (Recency, Frequency, Monetary) analysis** was performed to segment customers.  
+### 👥 Customer Insights  
 - High-value customers were identified for **targeted marketing strategies**.  
 
-### 📌 Employee Performance  
+### 💁‍♀️ Employee Performance  
 - Sales representatives’ performances were compared based on **total revenue and order volume**.  
 
 ---
 
 ## 🛠 Technologies Used  
 
-🔹 **SQL (PostgreSQL)** → Data extraction & transformation  
-🔹 **Python (Pandas, Matplotlib, Seaborn)** → Advanced data analysis & visualization  
+🔹 **SQL (PostgreSQL)** → Data extraction & transformation with advanced Queries 
+🔹 **Python (Pandas, Numpy, Matplotlib, Seaborn, pandas.io.sql)** → Advanced data analysis & visualization  
 🔹 **Power BI** → Interactive dashboards & business insights  
 
 ---
@@ -57,36 +53,18 @@ The **Northwind dataset** consists of multiple relational tables, including:
 ## 📊 Visualizations & Dashboards  
 Power BI reports include:  
 
-✅ **Annual Sales Trends**  
-✅ **Top Categories & Products**  
-✅ **Customer Segmentation (RFM Analysis)**  
-✅ **Employee Sales Performance**  
+✅ **Customer Analysis**
+![image](https://github.com/user-attachments/assets/0e02c7fb-1a96-4b89-a92d-6aaefed46cdc)
 
-Check out the **Power BI dashboard screenshots** in the repository!  
+✅ **Employee Analysis**
+![image](https://github.com/user-attachments/assets/c7658b57-1201-4b16-97c2-cdcd48f26066)
 
----
+✅ **Shipper Analysis**
+![image](https://github.com/user-attachments/assets/2679bbe5-1ee3-40b1-9138-ae139094f519)
 
-## 📂 Repository Structure 
-Northwind_Data_Analysis/
-│
-├── SQL_Queries/ # SQL scripts for data extraction
-│ ├── category_analysis.sql
-│ ├── sales_trends.sql
-│ ├── customer_segmentation.sql
-│ ├── employee_performance.sql
-│
-├── Python_Analysis/ # Jupyter Notebooks for EDA & Visualizations
-│ ├── northwind_eda.ipynb
-│ ├── category_sales.ipynb
-│ ├── customer_rfm.ipynb
-│ ├── employee_sales.ipynb
-│
-├── PowerBI_Reports/ # Power BI dashboard files
-│ ├── northwind_dashboard.pbix
-│ ├── sales_performance.pbix
-│ ├── customer_analysis.pbix
-│
-└── README.md # Project documentation
+✅ **Stock Level**
+![image](https://github.com/user-attachments/assets/9990f86a-2ad6-43bc-8395-cac294fe941a)
+
 ---
 
 ## 📢 Let's Connect!  
