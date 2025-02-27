@@ -1,4 +1,9 @@
+------------------------------  ANALYSIS ON PYTHON  --------------------------------
+
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 --Annual Sales Trend
+------------------------------------------------------------------------------------
 
 SELECT
 	DATE_TRUNC('month', shipped_date)::DATE AS date,
@@ -15,8 +20,8 @@ WHERE NOT shipped_date IS NULL
 GROUP BY 1
 ORDER BY 1
 
-
-
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 -- **Category Based**
 SELECT * from categories
 select * from products
@@ -24,7 +29,10 @@ select * from suppliers
 select * from customers
 select * from order_details
 
-----Kategori sayısı ve satışı
+------------------------------------------------------------------------------------
+----Number of categories and sales
+------------------------------------------------------------------------------------
+	
 SELECT
 	c.category_name,
 	COUNT(o.order_id)
@@ -46,9 +54,11 @@ FROM
 GROUP BY 1
 ORDER BY 2 DESC
 	
-
-----Ürün sayısı
-
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+----Number of product
+------------------------------------------------------------------------------------
+	
 WITH top_10_product AS (
     SELECT 
         p.product_name,
@@ -77,8 +87,11 @@ SELECT
     total_order
 FROM top_10_product;
 
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+----Categorical sales and total units
+------------------------------------------------------------------------------------
 
-----Kategorik satış ve toplam adet
 SELECT
 	c.category_name,
 	DATE_TRUNC('month', shipped_date)::DATE AS date,
@@ -102,10 +115,8 @@ WHERE NOT shipped_date IS NULL
 GROUP BY 1,2
 ORDER BY 1,2
 
-
-
-
-
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 	
 SELECT
 	c.category_name,
@@ -119,13 +130,12 @@ FROM
 GROUP BY 1
 ORDER BY 1
 
-
---en çok satan ürün en fazla kazandıran ürün ve en çok kazandıran ürünü hangi şirketler almış. en çok alan hangi şirket ilk 3 ü getir ve teşekkür mesajı iletilecekmiş gibi analiz et
-
-
------------------------ Power BI -----------------------
-
--- Customer Analysis(Segmented) ------------------------
+-----------------------------  ANALYSIS ON POWER BI  -------------------------------
+	
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+-- Customer Analysis(Segmented)
+------------------------------------------------------------------------------------
 WITH customer_revenue AS (
     SELECT
         c.customer_id,
@@ -182,12 +192,11 @@ FROM customers AS c
 WHERE NOT o.shipped_date IS NULL
 ORDER BY price DESC
 
-
-
-
-
--- Employee Analysis ------------------------------------
-
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+-- Employee Analysis
+------------------------------------------------------------------------------------
+	
 select * from employees
 select * from employee_territories
 select * from territories
@@ -195,12 +204,8 @@ select * from region
 select * from orders
 select * from order_details
 	
+------------------------------------------------------------------------------------	
 
-
-
-
-
-	
 WITH customer_revenue AS (
     SELECT
         c.customer_id,
@@ -264,12 +269,11 @@ FROM
 
 	WHERE NOT shipped_date IS NULL
 
-	
-	
-	
-----Inventory Analysis-------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------	
+----Inventory Analysis
 --PS. I treated units_on_order as orders received by Nortwind.
-
+------------------------------------------------------------------------------------
 WITH ranked_products AS (
     SELECT
         c.category_name,
@@ -316,15 +320,13 @@ FROM ranked_products
 ORDER BY total_sold DESC;
 
 
-----Kategorilere göre stok alanı ayarlayıp ona göre alandan tasarrufa gidilebilir.
+----P.S.: You can set the stock area according to the categories and 
+----save space accordingly.
 
-
-
-
-
-
-
-----Shipper Analysis--------------------------------
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+----Shipper Analysis
+------------------------------------------------------------------------------------
 
  SELECT
 	s.company_name AS shipper_name,
