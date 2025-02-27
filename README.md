@@ -68,11 +68,24 @@ Check out the **Power BI dashboard screenshots** in the repository!
 
 ## 📂 Repository Structure 
 📁 Northwind_Data_Analysis
-│-- 📂 SQL_Queries # SQL scripts for data extraction
-│-- 📂 Python_Analysis # Jupyter Notebooks for EDA
-│-- 📂 PowerBI_Reports # Power BI dashboard files
-│-- README.md # Project documentation
-
+├── 📂 SQL_Queries # SQL scripts for data extraction
+│ ├── category_analysis.sql
+│ ├── sales_trends.sql
+│ ├── customer_segmentation.sql
+│ └── employee_performance.sql
+│
+├── 📂 Python_Analysis # Jupyter Notebooks for EDA & Visualizations
+│ ├── northwind_eda.ipynb
+│ ├── category_sales.ipynb
+│ ├── customer_rfm.ipynb
+│ └── employee_sales.ipynb
+│
+├── 📂 PowerBI_Reports # Power BI dashboard files
+│ ├── northwind_dashboard.pbix
+│ ├── sales_performance.pbix
+│ └── customer_analysis.pbix
+│
+└── README.md # Project documentation
 ---
 
 ## 📢 Let's Connect!  
